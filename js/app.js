@@ -18,8 +18,8 @@ function verif()
 	
 	for(var i=0; i < keys.length; i++)
 			for (var j=0; j < keyReservada.length; j++)
-				if(keys[i]==keyReservada[j]){
-						relatorio +="- palavra reservada';
+				if(keys[i] == keyReservada[j]){
+						relatorio += keys[i] + ' - palavra reservada';
 				}
 		
 	
