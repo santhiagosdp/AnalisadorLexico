@@ -3,75 +3,75 @@ COMPILADORES 2018/1
 Sistemas de Informação
 CEULP ULBRA
  -->
-
-
-<!DOCTYPE html>
-<!doctype html>
+ 
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Analise Lexica</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/base.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark justify-content-between">
-        <a class="navbar-brand" style="color: #fff">Vamos lá!</a>
+  <main>
+
+    <nav>
+      <div class="nav-wrapper grey darken-3">
+        <a class="brand-logo center">Analisador Léxico</a>
+      </div>
     </nav>
 
-    <div class="row">
-        <div class="container title">
-            <div align="center">
-                <h2>
-                    Analisador Lexico
-                </h2>
-            </div>
+    <div class="container" style="margin-top:60px;">
+		<div class="row">
+			<div class="col l5">
+				<textarea id="codigo" name="codigo" rows="20" cols="40"></textarea>		
+			</div>
+			<div class="col l1">
+				<button type="button" onclick="verif()" class="btn btn-primary">Analisar</button>
+			</div>
+			<div class="col l5">
+				<h3 id="result" align="center"></h3>
+			</div>
+		</div>
+		<div class="row"> 
+	  <!-- segunda linha para carregar o alfabeto -->
+        <div class="col l12">
+          <div id="tokens" style="margin-top:10px"></div>
         </div>
+      </div>
+      <div class="row">
+        <!-- em branco -->
+		
+      </div>
     </div>
-	<div class="row" >
-        <div class="container" >
-			<div class="col-md-5">
-				<div class="col-md-12">
-					<div>
-						<h3>Codigo em pyhton</h3>
-						<textarea id="codigo" name="codigo" rows="10" cols="40"></textarea>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row" >
-        <div class="container" >
-            <div class="col-md-12">
-				<div class="col-md-2"></div>
-				<div class="col-md-10">
-					<div>
-						<button type="button" onclick="verif()" class="btn btn-primary">
-						  Analisar
-						</button>
-						<div id="analiseok">
-							<h2 id="result"></h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-	<script src="js/app.js"></script>	
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-        crossorigin="anonymous"></script>
+
+  </main>
+
+  <footer class="page-footer grey darken-2">
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col m6">
+            <h5 class="white-text">Compiladores - CEULP ULBRA 2018/01</h5>
+          </div>
+          <div class="col m6 right-align">
+            <a href="https://github.com/santhiagosdp/AnalisadorLexico" class="waves-effect btn grey ">
+              <i class="material-icons left">cloud_download</i>GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript " src="js/jquery.min.js "></script>
+  <script type="text/javascript " src="js/materialize.min.js "></script>
+  <script type="text/javascript " src="js/app.js "></script>
 </body>
 
 </html>

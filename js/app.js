@@ -19,20 +19,37 @@ function verif()
 	numElemStr="";
 	keys = codigo.split(' ');
 	
-	for(var i=0; i < keys.length; i++)
-			for (var j=0; j < keyReservada.length; j++)
-				
-				if(keys[i] == keyReservada[j]){
-					relatorio += keys[i] + ' - palavra reservada \n\n\n';
-				}
-				else if (keys[i] == keyIdentificador[j]){
-					relatorio += keys[i] + ' - Identifiacor\n';
-				}
-				else if (keys[i] == keyDelimitador[j]){
-					relatorio += keys[i] + ' - Delimitador\n\n';
-				}					
+	for(var i=0; i < keys.length; i++){
+		var entrou = false;
+		for (var r=0; r < keyReservada.length; r++){
+			if(keys[i] == keyReservada[r] && entrou == false){
+				relatorio += keys[i] + ' :  palavra reservada <br></br>';
+				entrou = true;
+				break;
+			}
+		}
+		for (var j=0; j < keyIdentificador.length; j++){
+			if (keys[i] == keyIdentificador[j] && entrou == false){
+				relatorio += keys[i] + ' :  Identificador<br></br>';
+				entrou = true;
+				break;
+			}
+		}
+		for (var d=0; d < keyDelimitador.length; d++){
+			if (keys[i] == keyDelimitador[d] && entrou == false){
+				relatorio += keys[i] + ' : Delimitador<br></br>';
+				entrou = true;
+				break;
+			}
+		}
+		if (entrou ==false){
+			relatorio += keys[i] + ' - Sem êxito na analise<br></br>';
+			entrou = true;
+		}
+	}
 	if (2==2)
 	{
+		/* relatorio = keys[0] + "<br></br>"+ relatorio; */
 		document.getElementById('result').innerHTML = relatorio;
 	}
 	else
