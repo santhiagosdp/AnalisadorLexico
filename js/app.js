@@ -8,7 +8,7 @@ CEULP ULBRA
 
 
 function verif() 
-{	var keyReservada = ["and","del","from","not","while","as","elif","global","or","with","assert","else","if","object","pass","yield","break","except",
+{	var keyReservada = ["and","var", "del","from","not","while","as","elif","global","or","with","assert","else","if","object","pass","yield","break","except",
 "import","print","class","exec","in","len","range","raise","continue","finally","is","list","return","def","for","lambda","try","self","split"];
 	var keyIdentificador = ["+","-","*","**","/","//","%","<<",">>","&","|","^","~","<",">","<=",">=","==","!=","<>"];
 	var keyDelimitador = ["(",")","[","]","{","}","@",",",":",".","`","=",";","+=","-=","*=","/=","//=","%=","&=","|=","^=",">>=","<<=","**=","'","'"];
