@@ -13,7 +13,7 @@ function verif()
 	var keyIdentificador = ["+","var", "i","-","*","**","/","//","%","<<",">>","&","|","^","~","<",">","<=",">=","==","!=","<>"];
 	var keyDelimitador = ["(",")","[","]","{","}","@",",",":",".","`","=",";","+=","-=","*=","/=","//=","%=","&=","|=","^=",">>=","<<=","**=","'","'"];
 
-	codigo = document.getElementById('codigo').value;
+	codigo = 'for ( var i=0 ) * ? del'; //document.getElementById('codigo').value;
 	numElem = 0;
 	relatorio="<table class='table table-bordered'><tr><th>Token</th><th>Identificação</th></tr>";
 	numElemStr="";
@@ -23,7 +23,7 @@ function verif()
 		var entrou = false;
 		for (var r=0; r < keyReservada.length; r++){
 			if(keys[i] == keyReservada[r] && entrou == false){
-				relatorio += "<tr><td>"+keys[i]+"</td><td>Palavra reservada"+"</td></tr> "
+				relatorio += "<tr><td>"+keys[i]+"</td><td>Palavra reservada ["+i+"]"+"</td></tr>"
 				//relatorio += keys[i] + ' ==>  palavra reservada <br></br> ';
 				entrou = true;
 				break;
@@ -31,7 +31,7 @@ function verif()
 		}
 		for (var j=0; j < keyIdentificador.length; j++){
 			if (keys[i] == keyIdentificador[j] && entrou == false){
-				relatorio += "<tr><td>"+keys[i]+"</td><td>Identificador"+"</td></tr> "
+				relatorio += "<tr><td>"+keys[i]+"</td><td>Identificador ["+i+"]"+"</td></tr> "
 				//relatorio += keys[i] + ' ==>  Identificador<br></br>';
 				entrou = true;
 				break;
@@ -39,14 +39,14 @@ function verif()
 		}
 		for (var d=0; d < keyDelimitador.length; d++){
 			if (keys[i] == keyDelimitador[d] && entrou == false){
-				relatorio += "<tr><td>"+keys[i]+"</td><td>Delimitador"+"</td></tr> "
+				relatorio += "<tr><td>"+keys[i]+"</td><td>Delimitador ["+i+"]"+"</td></tr> "
 				//relatorio += keys[i] + ' ==> Delimitador<br></br>';
 				entrou = true;
 				break;
 			}
 		}
 		if (entrou ==false){
-			relatorio += "<tr><td>"+keys[i]+"</td><td>Sem êxito na analise"+"</td></tr> "
+			relatorio += "<tr><td>"+keys[i]+"</td><td>Sem êxito na analise ["+i+"]"+"</td></tr> "
 			//relatorio += keys[i] + ' ==> Sem êxito na analise<br></br>';
 			entrou = true;
 		}
