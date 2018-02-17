@@ -15,7 +15,7 @@ function verif()
 	//codigo = 'for ( var i=0 ) * ? del';
 	codigo = document.getElementById('codigo').value;
 	numElem = 0;
-	relatorio="<table class='table table-bordered'><tr><th>Token</th><th>Identificação [coluna][linha]</th></tr>";
+	relatorio="<table class='table table-bordered'><tr><th>Token</th><th>Identificação [linha][coluna]</th></tr>";
 	numElemStr="";
 	frase = codigo.split('\n');
 
@@ -29,7 +29,7 @@ function verif()
 			{
 				if(keys[i] == keyReservada[r] && entrou == false)
 				{
-					relatorio += "<tr><td>"+keys[i]+"</td><td>Palavra reservada ["+i+"] ["+linha+"]"+"</td></tr>"
+					relatorio += "<tr><td>"+keys[i]+"</td><td>Palavra reservada ["+linha+"] ["+i+"]"+"</td></tr>"
 					//relatorio += keys[i] + ' ==>  palavra reservada <br></br> ';
 					entrou = true;
 					break;
@@ -39,7 +39,7 @@ function verif()
 			{
 				if (keys[i] == keyIdentificador[j] && entrou == false)
 				{
-					relatorio += "<tr><td>"+keys[i]+"</td><td>Identificador ["+i+"] ["+linha+"]"+"</td></tr> "
+					relatorio += "<tr><td>"+keys[i]+"</td><td>Identificador ["+linha+"] ["+i+"]"+"</td></tr> "
 					//relatorio += keys[i] + ' ==>  Identificador<br></br>';
 					entrou = true;
 					break;
@@ -49,7 +49,7 @@ function verif()
 			{
 				if (keys[i] == keyDelimitador[d] && entrou == false)
 				{
-					relatorio += "<tr><td>"+keys[i]+"</td><td>Delimitador ["+i+"] ["+linha+"]"+"</td></tr> "
+					relatorio += "<tr><td>"+keys[i]+"</td><td>Delimitador ["+linha+"] ["+i+"]"+"</td></tr> "
 					//relatorio += keys[i] + ' ==> Delimitador<br></br>';
 					entrou = true;
 					break;
@@ -57,7 +57,7 @@ function verif()
 			}
 			if (entrou ==false)
 			{
-				relatorio += "<tr><td>"+keys[i]+"</td><td>Sem êxito na analise ["+i+"] ["+linha+"]"+"</td></tr> "
+				relatorio += "<tr><td>"+keys[i]+"</td><td>Sem êxito na analise ["+linha+"] ["+i+"]"+"</td></tr> "
 				//relatorio += keys[i] + ' ==> Sem êxito na analise<br></br>';
 				entrou = true;
 			}
