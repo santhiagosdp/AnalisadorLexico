@@ -4,11 +4,11 @@ Sistemas de Informação
 CEULP ULBRA
 */
 
-//analisando
-
+//analisando 
 
 function verif() 
-{	var keyReservada = ["and","var", "del","from","not","while","as","elif","global","or","with","assert","else","if","object","pass","yield","break","except",
+{ // Alfabeto Python	
+var keyReservada = ["and","var", "del","from","not","while","as","elif","global","or","with","assert","else","if","object","pass","yield","break","except",
 "import","print","class","exec","in","len","range","raise","continue","finally","is","list","return","def","for","lambda","try","self","split"];
 	var keyIdentificador = ["+","-","*","**","/","//","%","<<",">>","&","|","^","~","<",">","<=",">=","==","!=","<>"];
 	var keyDelimitador = ["(",")","[","]","{","}","@",",",":",".","`","=",";","+=","-=","*=","/=","//=","%=","&=","|=","^=",">>=","<<=","**=","'","'"];
@@ -23,7 +23,7 @@ function verif()
 		var entrou = false;
 		for (var r=0; r < keyReservada.length; r++){
 			if(keys[i] == keyReservada[r] && entrou == false){
-				relatorio += keys[i] + ' ==>  palavra reservada <br></br>';
+				relatorio += keys[i] + ' ==>  palavra reservada <br></br> ';
 				entrou = true;
 				break;
 			}
