@@ -23,27 +23,27 @@ function verif()
 		var entrou = false;
 		for (var r=0; r < keyReservada.length; r++){
 			if(keys[i] == keyReservada[r] && entrou == false){
-				relatorio += keys[i] + ' :  palavra reservada <br></br>';
+				relatorio += keys[i] + ' ==>  palavra reservada <br></br>';
 				entrou = true;
 				break;
 			}
 		}
 		for (var j=0; j < keyIdentificador.length; j++){
 			if (keys[i] == keyIdentificador[j] && entrou == false){
-				relatorio += keys[i] + ' :  Identificador<br></br>';
+				relatorio += keys[i] + ' ==>  Identificador<br></br>';
 				entrou = true;
 				break;
 			}
 		}
 		for (var d=0; d < keyDelimitador.length; d++){
 			if (keys[i] == keyDelimitador[d] && entrou == false){
-				relatorio += keys[i] + ' : Delimitador<br></br>';
+				relatorio += keys[i] + ' ==> Delimitador<br></br>';
 				entrou = true;
 				break;
 			}
 		}
 		if (entrou ==false){
-			relatorio += keys[i] + ' - Sem êxito na analise<br></br>';
+			relatorio += keys[i] + ' ==> Sem êxito na analise<br></br>';
 			entrou = true;
 		}
 	}
