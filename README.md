@@ -7,5 +7,5 @@
 
 ## Para Testar
  - Extrair pasta 'AnalisadorLexico-master' para area de trabalho;
- - abrir no Navegador 'Chrome' e digitar o endereço file:///C:/Users/Santhiagosdp/Desktop/AnalisadorLexico-master/
+ - abrir no Navegador 'Chrome' e digitar o endereço file:///C:/Users/Santhiagosdp/Desktop/AnalisadorLexico-master/index.html
   
