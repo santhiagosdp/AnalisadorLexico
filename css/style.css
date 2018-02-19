@@ -9,6 +9,13 @@ body {
   padding-bottom: 40px;
   background-color: #F0F8FF;
 }
+.btn-outline-purple {
+    padding: .9em 1.25em;
+    color: #9f7be1;
+    background: transparent;
+    border-color: rgba(159,123,225,0.5);
+    border-radius: .3em;
+}
 h3{
   color: #4cae4c;
 }
